@@ -1,13 +1,14 @@
 import "./App.css";
 import Row from "./components/Row/Row";
 import categories from "./api";
+import Banner from "./components/Banner/Banner";
+import Nav from "./components/Nav/Nav.js"
 
 function App() {
   return (
     <div className="App">
-      {/* Navbar */}
-      {/* destaque */}
-      {/* Em alta */}
+      <Nav />
+      <Banner />
       {categories.map((category) => {
         return (
           <Row
