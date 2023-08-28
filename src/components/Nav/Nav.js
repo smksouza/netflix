@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Nav.css";
 
 function nav() {
   const [show, setShow] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setShow(window.scrollY > 100);
+    });
+
+  }, []);
 
   return (
-    <div className="nav-container">
+    <div className={`nav-container ${show && "nav-container-black"}`}>
       <img
         className="nav-logo"
         src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
