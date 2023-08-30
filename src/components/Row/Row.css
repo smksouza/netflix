@@ -23,7 +23,7 @@
 }
 
 .movie-card-large {
-    object-fit: contain;
+  object-fit: contain;
   width: 100%;
   max-height: 250px;
   margin-bottom: 10px;
@@ -31,5 +31,6 @@
 }
 
 .movie-card:hover {
+  cursor: pointer;
   transform: scale(1.1);
 }
